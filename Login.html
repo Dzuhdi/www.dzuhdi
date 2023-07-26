@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+<body>
+     <!-- Login Form -->
+     <div class="login-form">
+        <form id="login-form">
+            <link href="css/style.css" rel="stylesheet" />
+            <h2 class="text-center">Login</h2>
+            <div class="form-group">
+                <input type="text" class="form-control" id="username" placeholder="Username" required="required">
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" id="password" placeholder="Password" required="required">
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-block">Log in</button>
+            </div>
+        </form>
+    </div>
+    <!-- Dashboard -->
+<section class="page-section" id="dashboard">
+    <div class="container px-4 px-lg-5">
+        <h2 class="text-center mt-0">Lakukan Login</h2>
+        <hr class="divider" />
+        <div class="row gx-4 gx-lg-5">
+            <div class="col-lg-4 col-md-6 text-center">
+                <div class="mt-5">
+                    <div class="mb-2"><i class="bi bi-file-earmark-text fs-1 text-primary"></i></div>                
+                </div>
+            </div>
+            <!-- Tambahkan blok lain untuk menuju halaman web lainnya jika diperlukan -->
+        </div>
+    </div>
+</section>
+<script>
+    document.querySelector("#login-form").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent form submission
+        
+        var usernameInput = document.querySelector("#username");
+        var passwordInput = document.querySelector("#password");
+        
+        var username = usernameInput.value;
+        var password = passwordInput.value;
+        
+        if (username === "Dzuhdi" && password === "23012004") {
+            // Redirect to another page or perform desired action
+            alert("Login successful! Redirecting to the dashboard...");
+            window.location.href = "index.html";
+            
+        } else {
+            // Show error message
+            alert("Maaf, anda siapa? Jangan sok asik!");
+            usernameInput.value = ""; // Clear username field
+            passwordInput.value = ""; // Clear password field
+        }
+    });
+</script>
+</body>
+
+</head>
